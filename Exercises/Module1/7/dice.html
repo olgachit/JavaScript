@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Question 7</title>
+</head>
+<body>
+<script>function rollDice(numDice) {
+  let sum=0;
+  for (let i=0; i<numDice; i++) {
+    const roll=Math.floor(Math.random()*6)+1;
+    sum+=roll;
+  }
+  return sum;
+}
+const numDice = parseInt(prompt("Enter number of dice rolls"));
+  const result=rollDice(numDice)
+console.log(result)
+</script>
+</body>
+</html>
