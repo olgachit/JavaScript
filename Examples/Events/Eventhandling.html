@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button>Click me</button>
+<script>
+const button = document.querySelector('button');
+function A(){
+  alert('This is function A');
+  button.removeEventListener('click', A);
+  button.addEventListener('click', B)
+}
+function B(){
+  alert('This is function B');
+}
+button.addEventListener('click', A);
+</script>
+</body>
+</html>
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<a href="http://www.metropolia.fi" id="myLink">Click me</a>
+<body>
+<script>
+const link = document.querySelector('myLink');
+function A(event){
+  event.preventDefault();
+  alert('Default action stopped! Now switching to function B');
+  link.removeEventListener('click', A);
+  link.addEventListener('click', B)
+}
+function B(){
+  alert('This is function B. Now the link will work.');
+}
+link.addEventListener('click', A);
+</script>
+</body>
+</html>
