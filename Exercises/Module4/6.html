@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <button id="getJoke">Get a random Joke</button>
+
+  <script>
+    async function joke(evt) {
+        evt.preventDefault()
+        const data=document.getElementById('query').value;
+        try {
+            const response=await fetch(`https://api.chucknorris.io/jokes/search?query=${data}`);
+            const jokes
+        }
+    }
+  </script>
+</body>
+</html>

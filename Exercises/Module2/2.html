@@ -5,6 +5,23 @@
     <title>Title</title>
 </head>
 <body>
+<div id="participant-list"></div>
+<script>
+    const num_of_participants=parseInt(prompt("Enter number of participants"));
+    let participants = [];
+    for (let i=0; i<num_of_participants; i++){
+        let names=prompt("Enter the names of participants");
+        participants.push(names);
+    }
+    const ol = document.createElement('ol');
+    participants.forEach(participant => {
+        const li = document.createElement('li');
+        li.textContent = participant;
+        ol.appendChild(li);
+    });
+    document.getElementById("participant-list").appendChild(ol);
+</script>
 
 </body>
+
 </html>

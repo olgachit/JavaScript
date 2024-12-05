@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="https://api.tvmaze.com/search/shows" method="get" target="_blank">
+    <input id="query" name="q" type="text" required>
+  <button type="submit">Search</button>
+</form>
+<script>
+  document.querySelector('form').addEventListener('submit', async () => {
+    event.preventDefault();
+    const params={
+      q:`${document.querySelector('#query').value}`
+    }
+  })
+</script>
+</body>
+</html>

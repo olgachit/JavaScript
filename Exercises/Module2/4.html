@@ -5,6 +5,18 @@
     <title>Title</title>
 </head>
 <body>
-
+<script>
+    let numbers=[];
+    while (true) {
+        let user_input = parseFloat(prompt("Enter a number (0 to stop):"));
+        if (user_input === 0) {
+            break;
+    }
+        numbers.push(user_input)
+    };
+    numbers.sort((a, b) => b - a);
+    console.log("Biggest to smallest")
+    numbers.forEach(number => console.log(number));
+</script>
 </body>
 </html>

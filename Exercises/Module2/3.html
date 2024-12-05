@@ -5,6 +5,21 @@
     <title>Title</title>
 </head>
 <body>
-
+<div id="dog-list"></div>
+<script>
+    let dogs = [];
+    for (let i=0; i<6; i++){
+        let dogNames=prompt("Enter the names of 6 dogs");
+        dogs.push(dogNames);
+    }
+    dogs.sort().reverse()
+    const ul = document.createElement('ul');
+    dogs.forEach(dog => {
+        const li = document.createElement('li');
+        li.textContent = dog;
+        ul.appendChild(li);
+    });
+    document.getElementById("dog-list").appendChild(ul);
+</script>
 </body>
 </html>
